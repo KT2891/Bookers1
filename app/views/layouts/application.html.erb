@@ -15,16 +15,6 @@
       <%= flash[:notice] %>
     </p>
 
-    <!--メッセージ確認用-->
-<% if @book.errors.any? %>
-  <%= @book.errors.count %>件のエラーが発生しました
-  <ul>
-    <% @book.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
-
     <%= yield %>
   </body>
 </html>
