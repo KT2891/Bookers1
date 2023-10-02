@@ -15,12 +15,16 @@
     margin: 33px;
  }
 
+ a{
+   color: black;
+ }
+
  a:visited{
     color: #666;
  }
 
  a:hover{
-    color: #fff;
+    color: white;
     background-color: #000;
  }
 
