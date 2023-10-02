@@ -36,6 +36,10 @@
     padding: 0 5px 7px 5px;
  }
 
-.new_book_box{
+.new_book_box, .new_book_submit{
     margin-bottom: 10px;
  }
+
+.flash_notice{
+    color: green;
+}

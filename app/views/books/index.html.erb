@@ -21,7 +21,7 @@
 
 <h2>New book</h2>
 
-<%= form_with model: @book, url: "/books", method: :post do |f| %>
+<%= form_with model: @book, url: books_path, method: :post do |f| %>
   <div class="new_book_box">
     <div class="new_book_title">Title</div>
     <%= f.text_field :title %>
