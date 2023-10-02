@@ -2,25 +2,11 @@
 
 <%= form_with model: @book, url: book_path(@book.id), method: :patch do |f| %>
 
-  <%= render "layouts/errors_messages" %>
+  <!--パーシャル:エラーメッセージ用-->
+  <%= render partial: "layouts/errors_messages" %>
 
-  <div class="new_book_box">
-    <div class=" <%= "error_emphasis" if @book.errors[:title].any? %>">
-      <label for="book_title">Title</label>
-    </div>
-    <div class=" <%= "error_emphasis" if @book.errors[:title].any? %>">
-      <%= f.text_field :title %>
-    </div>
-  </div>
-
-  <div class="new_book_box">
-    <div class=" <%= "error_emphasis" if @book.errors[:body].any? %>">
-      <label for="book_body">Body</label>
-    </div>
-    <div class=" <%= "error_emphasis" if @book.errors[:body].any? %>">
-      <%= f.text_area :body %>
-    </div>
-  </div>
+  <!--パーシャル:入力フォーム用-->
+  <%= render partial: "layouts/text_form", locals: {f: f, book: @book} %>
 
   <div class="new_book_submit">
     <%= f.submit "Update Book" %>

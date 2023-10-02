@@ -6,7 +6,6 @@ class BooksController < ApplicationController
   end
 
   def create
-    # @book = Book.new(title: params[:title], body: params[:body])
     @book = Book.new(book_params)
     if @book.save
       flash[:notice] = "Book was successfully created."
@@ -25,6 +24,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
+  # form_withでbook.idが見つからないエラーが出たためインスタンス変数にて記述
   def update
     @book = Book.find(params[:id])
     if @book.update(book_params)
